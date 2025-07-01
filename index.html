@@ -184,5 +184,18 @@
 
     <!-- Main Game Script -->
     <script src="main.js"></script>
+    <!-- Agrega esto al final del body, antes de los scripts -->
+<script>
+  // Si está dentro de un iframe, ajusta el estilo del body
+  if (window.parent !== window) {
+    document.body.style.margin = '0';
+    document.body.style.padding = '0';
+    document.body.style.overflow = 'hidden';
+    document.getElementById('game-container').style.margin = '0';
+    document.getElementById('game-container').style.height = '100vh';
+    document.getElementById('game-container').style.width = '100vw';
+    document.getElementById('game-container').style.border = 'none';
+  }
+</script>
 </body>
 </html>
